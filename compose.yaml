@@ -1,0 +1,12 @@
+version: '3'
+services:
+  kddns:
+    build: .
+    restart: always
+    environment:
+      - KDDNS_CREDENTIALS_FILE=/run/secrets/kddns_credentials
+    secrets:
+      - kddns_credentials
+secrets:
+  kddns_credentials:
+    file: ./kddns_credentials.txt
