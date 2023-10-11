@@ -45,11 +45,11 @@ Before getting started, ensure you have the following installed:
 
 ## Configuration
 
-- **Docker Compose File**: The `docker-compose.yml` file defines the DDNS updater service, environment variables, and secrets. Customize it according to your needs.
+- **Dockerfile**: The `Dockerfile` defines the container image and installation steps.
 
-- **DDNS Credentials**: Store your DDNS credentials securely in the `kddns_credentials.txt` file in the specified format.
+- **Docker Compose File**: The `compose.yml` file defines the DDNS updater service, environment variables, and secrets.
 
-- **Dockerfile**: The `Dockerfile` defines the container image and installation steps. Adjust it if needed.
+- **DDNS Credentials**: Store your DDNS credentials in the `kddns_credentials.txt` file in the specified format.
 
 ## Monitoring
 
@@ -69,7 +69,7 @@ docker compose down -v
 
 ## Troubleshooting
 
-- If you encounter issues, check the logs for error messages using `docker compose logs`.
+If you encounter issues, check the logs for error messages using `docker compose logs`.
 
 ## License
 
