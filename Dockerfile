@@ -1,8 +1,12 @@
 FROM debian:latest
 
-RUN apt-get update && apt-get install -y curl
+RUN useradd -m -s /bin/bash danielementary
 
-COPY kddns.sh  /app/kddns.sh
+USER danielementary
+
+RUN apt-get update && apt-get install -y curl && apt-get clean
+
+COPY kddns.sh /app/kddns.sh
 
 RUN chmod +x /app/kddns.sh
 
